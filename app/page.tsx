@@ -1,6 +1,5 @@
 "use client"
 import React, { MouseEvent } from 'react';
-import BackContent from "@/components/BackContent";
 import HomeContent from "@/components/Content";
 import CoinIcon from "@/components/Icon/Coin";
 import HomeIcon from "@/components/Icon/Home";
@@ -51,13 +50,10 @@ export default function Home() {
 
   return (
     <MainContent>
-      <Image className="z-[0] relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]" src="/back.png" alt="Next.js Logo" width={338} height={800}
-      />
-      <BackContent />
       <TopNav title='RealSpot'><Question /></TopNav>
       <RefreshBtn title="このエリアでさがす"><Refresh /></RefreshBtn>
       <HomeContent>
-        <Image src="/user.png" width={230} height={200} className="relative rounded-md ml-[13px] z-[0]" alt="user.png" />
+        <Image src="/user.png" width={2000} height={2000} className="relative rounded-md z-[0]" alt="user.png" ></Image>
         <ResultBtn />
         <MarkerBtn title="現在地付近のメンバー" onClick={handleClick}><WhitePin /></MarkerBtn>
       </HomeContent>
