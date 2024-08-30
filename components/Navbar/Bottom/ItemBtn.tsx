@@ -1,12 +1,14 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren, MouseEvent } from 'react';
+
 type Props = PropsWithChildren<{
-    title?: string
+    title?: string;
+    onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }>;
-export default function ItemBtn({ children, title }: Props) {
+export default function ItemBtn({ children, title, onClick }: Props) {
     return (
-        <div className="flex flex-col items-center">
+        <button className="flex flex-col items-center" onClick={onClick}>
             {children}
             <label className="text-[11px] font-bold text-[#c9c9c9]">{title}</label>
-        </div>
+        </button>
     );
 }

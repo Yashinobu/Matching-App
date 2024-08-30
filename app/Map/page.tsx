@@ -1,3 +1,4 @@
+"use client"
 import BackContent from "@/components/BackContent";
 import HomeIcon from "@/components/Icon/Home";
 import MailIcon from "@/components/Icon/Mail";
@@ -9,9 +10,12 @@ import ItemBtn from "@/components/Navbar/Bottom/ItemBtn";
 import TopNav from "@/components/Navbar/Top";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useMemo } from "react";
+import { useMemo, MouseEvent } from "react";
+import { useRouter } from 'next/navigation';
 
 export default async function Page() {
+    const router = useRouter();
+
     const Map = useMemo(() => dynamic(
         () => import('@/components/Map/LeafletMap'),
         {
@@ -19,6 +23,21 @@ export default async function Page() {
             ssr: false
         }
     ), [])
+
+    const handleMsgClick = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        router.push('/Message')
+    }
+
+    const handleMyPageClick = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        router.push('/MyPage')
+    }
+
+    const handleHomeClick = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        router.push('/')
+    }
 
     return (
         <>
@@ -32,9 +51,9 @@ export default async function Page() {
                     <Map posix={[4.79029, -75.69003]} />
                 </div>
                 <BottomNav>
-                    <ItemBtn title="ホーム"><HomeIcon /></ItemBtn>
-                    <ItemBtn title="トーク"><MailIcon /></ItemBtn>
-                    <ItemBtn title="マイページ"><UserIcon /></ItemBtn>
+                    <ItemBtn title="ホーム" onClick={handleHomeClick}><HomeIcon /></ItemBtn>
+                    <ItemBtn title="トーク" onClick={handleMsgClick}><MailIcon /></ItemBtn>
+                    <ItemBtn title="マイページ" onClick={handleMyPageClick}><UserIcon /></ItemBtn>
                 </BottomNav>
             </MainContent>
         </>

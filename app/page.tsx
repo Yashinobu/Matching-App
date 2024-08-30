@@ -27,11 +27,28 @@ export default function Home() {
   const router = useRouter();
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
-    console.log('EEEEE')
-    // e.preventDefault()
+    e.preventDefault();
     router.push('/Map')
-    // router.push('../components/Map')
   }
+
+  const handleMsgClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log('Message')
+    router.push('/Message')
+  }
+
+  const handleMyPageClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log('MyPage')
+    router.push('/MyPage')
+  }
+
+  const handleHomeClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log('Home')
+    router.push('/')
+  }
+
   return (
     <MainContent>
       <Image className="z-[0] relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]" src="/back.png" alt="Next.js Logo" width={338} height={800}
@@ -50,9 +67,9 @@ export default function Home() {
         <SearchBtn title1="年齢で" title2="さがす"><SearchIcon /></SearchBtn>
       </SearchContent>
       <BottomNav>
-        <ItemBtn title="ホーム"><HomeIcon /></ItemBtn>
-        <ItemBtn title="トーク"><MailIcon /></ItemBtn>
-        <ItemBtn title="マイページ"><UserIcon /></ItemBtn>
+        <ItemBtn title="ホーム" onClick={handleHomeClick}><HomeIcon /></ItemBtn>
+        <ItemBtn title="トーク" onClick={handleMsgClick}><MailIcon /></ItemBtn>
+        <ItemBtn title="マイページ" onClick={handleMyPageClick}><UserIcon /></ItemBtn>
       </BottomNav>
     </MainContent>
   );
