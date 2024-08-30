@@ -55,7 +55,7 @@ const Map = (Map: MapProps) => {
         }
     }, [selectedPosition])
 
-    const Popups = ({ url, name, age, hobby }: PopupProps) => {
+    const Popups = () => {
         return (
             <Popup className="bg-[#FFFF54] text-[#5C5C5C]">
                 <button className="flex w-[155px] h-[50px]">
@@ -69,18 +69,6 @@ const Map = (Map: MapProps) => {
             </Popup>
         )
     }
-
-    // const myIcon = L.icon({
-    //     iconUrl: 'my-icon.png',
-    //     iconSize: [38, 95],
-    //     iconAnchor: [22, 94],
-    //     popupAnchor: [-3, -76],
-    //     shadowUrl: 'my-icon-shadow.png',
-    //     shadowSize: [68, 95],
-    //     shadowAnchor: [22, 94]
-    // });
-
-    // L.marker([50.505, 30.57], { icon: myIcon }).addTo(map);
 
     const Markers = () => {
 
@@ -99,17 +87,8 @@ const Map = (Map: MapProps) => {
                     key={selectedPosition[0]}
                     position={selectedPosition}
                     interactive={true}
-                // icon={{
-                //     iconUrl: 'my-icon.png',
-                //     iconSize: [38, 95],
-                //     iconAnchor: [22, 94],
-                //     popupAnchor: [-3, -76],
-                //     shadowUrl: 'my-icon-shadow.png',
-                //     shadowSize: [68, 95],
-                //     shadowAnchor: [22, 94]
-                // }}
                 >
-                    <Popups url="/user.png" name="Yamada Yuki" age="25" hobby="Music, Book..." />
+                    <Popups />
                 </Marker >
                 : null
         )

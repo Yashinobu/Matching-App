@@ -1,6 +1,5 @@
 "use client"
 import React, { MouseEvent } from 'react';
-import BackContent from "@/components/BackContent";
 import HomeContent from "@/components/Content";
 import CoinIcon from "@/components/Icon/Coin";
 import HomeIcon from "@/components/Icon/Home";
