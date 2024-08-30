@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 export default function SearchContent({ children }: PropsWithChildren) {
     return (
-        <div className="flex justify-center mt-7 w-[76%] h-[65px] gap-7">{children}</div>
+        <div className="flex justify-center mt-9 w-[90%] h-[80px] gap-7">{children}</div>
     );
 }
