@@ -51,8 +51,6 @@ export default function Home() {
 
   return (
     <MainContent>
-      <Image className="z-[0] relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]" src="/back.png" alt="Next.js Logo" width={338} height={800}
-      />
       <BackContent />
       <TopNav title='RealSpot'><Question /></TopNav>
       <RefreshBtn title="このエリアでさがす"><Refresh /></RefreshBtn>
