@@ -51,11 +51,10 @@ export default function Home() {
 
   return (
     <MainContent>
-      <BackContent />
       <TopNav title='RealSpot'><Question /></TopNav>
       <RefreshBtn title="このエリアでさがす"><Refresh /></RefreshBtn>
       <HomeContent>
-        <Image src="/user.png" width={230} height={200} className="relative rounded-md ml-[13px] z-[0]" alt="user.png" />
+        <Image src="/user.png" width={290} height={290} className="relative rounded-md z-[0]" alt="user.png" ></Image>
         <ResultBtn />
         <MarkerBtn title="現在地付近のメンバー" onClick={handleClick}><WhitePin /></MarkerBtn>
       </HomeContent>
