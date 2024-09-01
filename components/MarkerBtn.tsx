@@ -9,7 +9,7 @@ export default function MarkerBtn({ children, title, onClick }: Props) {
     return (
         <button
             onClick={onClick}
-            className="flex rounded-full hover:text-black absolute text-white text-[20px] font-bold bottom-[10px] left-[7px] pl-[10px]"
+            className="flex rounded-full hover:text-black absolute text-white text-[20pt] font-bold bottom-[10pt] left-[7px] pl-[10px]"
         >
             {children}{title}
         </button>

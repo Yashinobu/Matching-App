@@ -47,7 +47,6 @@ const Map = (Map: MapProps) => {
     }, []);
 
     useEffect(() => {
-        // getAddressFromCoordinates(region)
         const userNumber = Math.round(Math.random() * 3);
         if (userNumber !== userIndex) {
             setUserIndex(userNumber);
