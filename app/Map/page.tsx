@@ -41,9 +41,9 @@ export default async function Page() {
         <>
             <MainContent>
                 <TopNav title='RealSpot'><Question /></TopNav>
-                <div className="w-full h-[862px] bg-white"></div>
+                <div className="w-full h-[647px] bg-white"></div>
 
-                <div className="w-[95%] h-[75%] absolute left-[2.5%] top-[120px] sm:w-[40%] sm:left-[30%]">
+                <div className="w-[95%] h-[75%] absolute left-[2.5%] top-[85px] sm:w-[40%] sm:left-[30%]">
                     <Map posix={[4.79029, -75.69003]} />
                 </div>
                 <BottomNav>

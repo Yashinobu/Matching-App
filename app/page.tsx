@@ -50,7 +50,7 @@ export default function Home() {
 
   const imageStyle = {
     width: '100%',
-    height: '419pt'
+    height: '419px'
   }
 
   return (
