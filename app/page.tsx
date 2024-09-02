@@ -48,11 +48,6 @@ export default function Home() {
     router.push('/')
   }
 
-  const imageStyle = {
-    width: '100%',
-    height: '419px'
-  }
-
   return (
     <MainContent>
       <TopNav title='RealSpot'><Question /></TopNav>

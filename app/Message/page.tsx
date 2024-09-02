@@ -45,17 +45,13 @@ export default function MyPage() {
         router.push('/')
     }
 
-    const imageStyle = {
-        width: '100%',
-        height: '419px'
-    }
     return (
 
         <MainContent>
             <TopNav title='RealSpot'><Question /></TopNav>
             <RefreshBtn title="メッセージへようこそ!"><SmileIcon /></RefreshBtn>
             <HomeContent>
-                <Image src="/user.png" width={2000} height={2000} className="relative rounded-[15pt] z-[0]" alt="user.png" style={imageStyle}></Image>
+                <img src="/user.png" className="relative rounded-[15pt] z-[0] w-[100%] h-[335px] 2xs:h-[360px] xs:h-[335px] sm:h-[419px] md:h-[460px]" alt="user.png" />
                 <ResultBtn />
                 <MarkerBtn title="現在地付近のメンバー" onClick={handleClick}><WhitePin /></MarkerBtn>
             </HomeContent>
