@@ -51,7 +51,7 @@ export default function MyPage() {
             <TopNav title='RealSpot'><Question /></TopNav>
             <RefreshBtn title="メッセージへようこそ!"><SmileIcon /></RefreshBtn>
             <HomeContent>
-                <img src="/user.png" className="relative rounded-[15pt] z-[0] w-[100%] h-[335px] 2xs:h-[360px] xs:h-[305px] sm:h-[419px] md:h-[460px]" alt="user.png" />
+                <img src="/user.png" className="relative rounded-[15pt] z-[0] w-[100%] h-[335px] 2xs:h-[360px] xs:h-[295px] sm:h-[419px] md:h-[460px]" alt="user.png" />
                 <ResultBtn />
                 <MarkerBtn title="現在地付近のメンバー" onClick={handleClick}><WhitePin /></MarkerBtn>
             </HomeContent>
