@@ -43,7 +43,7 @@ export default async function Page() {
                 <TopNav title='RealSpot'><Question /></TopNav>
                 <div className="w-full 2xs:h-[590px] xs:h-[460px] sm:h-[638px] md:h-[710px] bg-white"></div>
 
-                <div className="w-[95%] h-[50%] absolute left-[2.5%] top-[85px] xs:h-[67%] xs:top-[68px] 2xs:h-[77%] 2xs:top-[75px] sm:h-[77%] sm:top-[80px]">
+                <div className="w-[95%] h-[50%] absolute left-[2.5%] top-[85px] xs:h-[65%] xs:top-[68px] 2xs:h-[77%] 2xs:top-[75px] sm:h-[77%] sm:top-[80px]">
                     <Map posix={[4.79029, -75.69003]} />
                 </div>
                 <BottomNav>
